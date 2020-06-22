@@ -85,22 +85,90 @@
                     <img src="img/logo.png" class="image-fluid">
                 </div>
                 <div class="col-sm align-self-center offset-1">
-                    <a href="#jump"><BUTTON class="btn btn-block btn-warning  nav-link text-white"
-                        data-toggle="tooltip" data-html="true"
-                        title="or Call us at<br><strong>+91 7589270604</strong>"
-                        data-placement="bottom"
-                        ><h4>Reserve Table</h4></BUTTON></a>
+                    <a data-toggle="modal" data-target="#reservemodal"><BUTTON class="btn btn-block btn-warning  nav-link text-white">
+                        <h4>Reserve Table</h4></BUTTON></a>
                 </div>
             </div>
         </div>
     </header>
+    <div class="modal fade" id="reservemodal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a table</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                            <div class="form-group row">
+                                 <label for="guestnum" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Number of Guests</label>
+                                 <div class="col-12 col-sm-8">
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestnum"> 
+                                   1 &nbsp
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestnum"> 
+                                    <span> 2 &nbsp</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestnum"> 
+                                    <span> 3 &nbsp</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestnum">
+                                     <span> 4 &nbsp</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestnum">
+                                     <span> 5 &nbsp</span>
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="guestnum"> 
+                                    <span> 6 &nbsp</span>
+                                </label>
+                            </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="section" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Section</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group">
+                                        <label class="btn btn-success active">
+                                        <input type="radio" name="options" checked> Non Smoking
+                                        </label>
+                                        <label class="btn btn-danger">
+                                        <input type="radio" name="options"> Smoking
+                                         </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="dateandtime" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Date and Time</label>
+                                    <div class="col-12 col-sm-4">
+                           <input type="text" class="form-control name="date" placeholder="Date" id="dateandtime">
+                       </div>
+                       <div class="col-12 col-sm-4">
+                           <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                       </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-12 col-sm-10">
+                                        <button type="submit" class="btn btn-primary">Reserve</button>
+                                    </div>
+                                </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
             <div class="col">
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active align-self-center">
                             <img class="d-block img-fluid"
                                 src="img/uthappizza.png" alt="Uthappizza">
                             <div class="carousel-caption d-none d-md-block">
@@ -108,7 +176,7 @@
                                 <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                             </div>
                         </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item align-self-center">
                                 <img src="img/Buffet.png" class="d-block image-fluid" alt="Buffet">
                                 <div class="carousel-caption d-none d-md-block">
                                 <h2> Weekend Grand Buffet
@@ -117,7 +185,7 @@
                                 <p class="d-none d-sm-block">Featuring mouthwatering comsbinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                                 </div>
                             </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item align-self-center">
                                 <img src="img/alberto.png" class="d-block image-fluid" alt="Alberto">
                             <div class="carousel-caption d-none d-md-block">
                                <h2>Alberto Somayya</h2>
@@ -175,62 +243,6 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content align-items-center" id="jump">
-            <div class="col-12 col-sm-10">
-                <div class="card offset-2">
-                    <h3 class="card-header bg-warning text-white">Reserve A Table</h3>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                 <label for="guestnum" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Number of Guests</label>
-                                 <div class="col-12 col-sm-8">
-                                <label class="radio-inline">
-                                    <input type="radio" name="guestnum"> 
-                                   1 &nbsp
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="guestnum"> 
-                                    <span> 2 &nbsp</span>
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="guestnum"> 
-                                    <span> 3 &nbsp</span>
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="guestnum">
-                                     <span> 4 &nbsp</span>
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="guestnum">
-                                     <span> 5 &nbsp</span>
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="guestnum"> 
-                                    <span> 6 &nbsp</span>
-                                </label>
-                            </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="guestnum" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Date and Time</label>
-                                    <div class="col-12 col-sm-4">
-                           <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                       </div>
-                       <div class="col-12 col-sm-4">
-                           <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                       </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-2"></div>
-                                    <div class="col-12 col-sm-10">
-                                        <button type="submit" class="btn btn-primary">Reserve</button>
-                                    </div>
-                                </div>
-                        </form>
-                    </div>
-                </div>
-                    
-                </div>
-            </div>
         </div>
 
     </div>
@@ -285,11 +297,6 @@
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
