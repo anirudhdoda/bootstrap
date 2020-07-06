@@ -30,7 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginmodal">
+                    <a  id="loginbutton">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -42,7 +42,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close"  id="loginclosebutton">
                         &times;
                     </button>
                 </div>
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-1" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-1" id="logincancelbutton">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in
                             </button>
                         </div>
@@ -85,7 +85,7 @@
                     <img src="img/logo.png" class="image-fluid">
                 </div>
                 <div class="col-sm align-self-center offset-1">
-                    <a data-toggle="modal" data-target="#reservemodal"><BUTTON class="btn btn-block btn-warning  nav-link text-white">
+                    <a id="reservebutton"><BUTTON class="btn btn-block btn-warning  nav-link text-white">
                         <h4>Reserve Table</h4></BUTTON></a>
                 </div>
             </div>
@@ -96,7 +96,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="reservetablebutton">
                         &times;
                     </button>
                 </div>
@@ -154,7 +154,8 @@
                                 <div class="form-group row">
                                     <div class="col-sm-2"></div>
                                     <div class="col-12 col-sm-10">
-                                        <button type="submit" class="btn btn-primary">Reserve</button>
+                                        <button type="button" class="btn btn-secondary btn-sm ml-1" id="reservecancelbutton" ">Cancel</button>
+                                        <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
                                     </div>
                                 </div>
                         </form>
@@ -317,7 +318,34 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
-            
+            $('#loginclosebutton').click(function()
+            {
+                $('#loginmodal').modal('hide');
+            });
+            $('#reservetablebutton').click(function()
+            {
+                $('#reservemodal').modal('hide');
+            });
+            $('#logincancelbutton').click(function()
+            {
+                $('#loginmodal').modal('hide');
+            });
+            $('#reservecancelbutton').click(function()
+            {
+                $('#reservemodal').modal('hide');
+            });
+            $('#loginbutton').click(function()
+            {
+                $('#loginmodal').modal('toggle');
+            });
+            $('#reservebutton').click(function()
+            {
+                $('#reservemodal').modal('toggle');
+            });
+            $('#loginbutton').click(function()
+            {
+                $('#loginmodal').modal('toggle');
+            });
         });
     </script>
 </body>
